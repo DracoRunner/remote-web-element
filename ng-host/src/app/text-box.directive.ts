@@ -20,10 +20,8 @@ export class TextBoxDirective {
     const htmlEle = this.el.element.nativeElement as HTMLElement;
     const inst = ref.instance as any;
     Object.entries(htmlEle.attributes).forEach((attr: any) => {
-      console.log(attr[1]);
-      Object.entries(attr[1]).forEach((st: any) => {
-        inst[st[0]] = htmlEle.getAttribute(st[1]);
-      });
+      console.log(attr[1].name, attr[1].value);
+      inst[attr[1].name] = attr[1].value;
     });
   }
 }
