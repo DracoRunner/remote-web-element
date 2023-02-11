@@ -1,10 +1,5 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Input } from '@angular/core';
-import { Output } from '@angular/core';
-import { EventEmitter } from '@angular/core';
-
-type textType = 'text' | 'number' | 'date';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-text-box',
@@ -21,7 +16,7 @@ export class TextBoxComponent {
   info!: string;
 
   @Input()
-  type: textType = 'text';
+  type = 'text';
 
   @Output()
   handleChange = new EventEmitter<any>();
