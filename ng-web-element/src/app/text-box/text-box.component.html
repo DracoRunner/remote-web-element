@@ -1,0 +1,3 @@
+<label>{{ label }}</label>
+<input [type]="type" (change)="handleChange.emit($event)" />
+<small *ngIf="info">{{ info }}</small>
