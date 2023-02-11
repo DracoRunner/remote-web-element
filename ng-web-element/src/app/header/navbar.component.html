@@ -1,0 +1,17 @@
+<div class="nav-bar">
+
+
+  <div class="nav-container">
+
+    <div class="flex-start">
+      <img width="80" [src]="logo">
+      <h1>{{title}}</h1>
+    </div>
+
+
+    <ul>
+      <ng-container *ngFor="let row of items">
+        <li><a href="#">{{row}}</a></li>
+      </ng-container>
+    </ul>
+  </div>
