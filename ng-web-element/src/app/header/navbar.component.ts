@@ -14,8 +14,17 @@ import {
 })
 export class NavbarComponent implements OnInit {
   @Input() logo!: string;
-  @Input() items: string[] = [];
   @Input() title!: string;
+
+  _items!: string;
+  get items() {
+    if(this._items)
+      return JSON.parse(this._items);
+    return "";
+  }
+  @Input() set items(value: string) {
+    this._items = value;
+  }
   constructor() {}
 
   ngOnInit() {}

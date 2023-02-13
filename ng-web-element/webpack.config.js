@@ -7,8 +7,7 @@ module.exports = withModuleFederationPlugin({
   name: "mfe1",
   exposes: {
     "./routes": "./src/app/routes.ts",
-    "./text-box": "./src/app/text-box/text-box.module.ts",
-    "./nav-bar": "./src/app/header/navbar.component.ts",
+    "./ms-module": "./src/app/ms.module.ts"
   },
   shared: {
     ...shareAll({
