@@ -1,20 +1,6 @@
-import { createCustomElement } from '@angular/elements';
-import { createApplication } from '@angular/platform-browser';
-import { NavbarComponent } from './app/header/navbar.component';
-import { TextBoxComponent } from './app/text-box/text-box.component';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { TextBoxModule } from './app/text-box/text-box.module';
 
-(async () => {
-  const app = await createApplication({
-    providers: [],
-  });
-  const elements: any[] = [
-    [TextBoxComponent, 'text-box'],
-    [NavbarComponent, 'nav-bar']
-  ];
-
-  elements.forEach(([component, name]) => {
-    const htmlElement = createCustomElement(
-      component, { injector: app.injector });
-    customElements.define(name, htmlElement);
-  });
-})();
+platformBrowserDynamic()
+  .bootstrapModule(TextBoxModule)
+  .catch((err) => console.error(err));

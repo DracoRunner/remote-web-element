@@ -9,4 +9,8 @@ export class AppComponent {
   constructor() {}
 
   ngOnInit(): void {}
+
+  onChange(event: any) {
+    console.log(event.target.value);
+  }
 }
