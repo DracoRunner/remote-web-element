@@ -1,6 +1,7 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { TextBoxModule } from './app/text-box/text-box.module';
+import { MsModule } from './app/ms.module';
+
 
 platformBrowserDynamic()
-  .bootstrapModule(TextBoxModule)
+  .bootstrapModule(MsModule)
   .catch((err) => console.error(err));

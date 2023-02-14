@@ -14,8 +14,9 @@ export class SharedModule {
     const m = await loadRemoteModule({
       type: 'module',
       remoteEntry: 'http://localhost:4201/remoteEntry.js',
-      exposedModule: './text-box',
+      exposedModule: './ms-module',
     });
-    createNgModule(m.TextBoxModule, this.injector);
+
+    createNgModule(m.MsModule, this.injector);
   }
 }
